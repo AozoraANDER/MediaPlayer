@@ -5,6 +5,7 @@
 #include <QMediaPlayer>
 #include <QVideoWidget>
 #include <QAudioOutput>
+#include <QPaintEvent>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -25,6 +26,15 @@ private slots:
     void on_Open_btn_clicked();
 
     void on_Play_btn_clicked();
+
+    void on_Pause_btn_clicked();
+
+    void on_Stop_btn_clicked();
+
+    void on_SoundVolume_valueChanged(int value);
+
+protected:
+    void paintEvent(QPaintEvent* e);
 
 private:
     Ui::MainWindow *ui;
